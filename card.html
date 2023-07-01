@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container"></div>
+
+
+
+   <script>
+    let cookiearray=document.cookie.split("=");
+    let item=JSON.parse(cookiearray[1]);
+    
+    let card = document.createElement("div");
+    let container=document.getElementById("container");
+        let bccolor={
+            "APPROVED":"green",
+            "PENDING":"yellow",
+            "CANCELLED":"red",
+            "COMPLETED":"blue"
+        }
+        card.className="card";
+  card.innerHTML=`
+  <div class="uppercard">
+      <div class="up">
+          <p id="approve" style="background-color:${bccolor[item.status]}" >${item.status}</p>
+          <b id="time">${item.date}</b>
+      </div>
+      <p id="loc">${item.caseNumber}</p>
+  </div>
+  <div class="lowercard">
+      <b>${item.fromLocation}</b>
+      <p id="p">${item.toLocation}</p>
+      <p id="rupee">${item.fare}</p>
+  </div>
+
+`;
+container.appendChild(card);
+
+   </script>
+</body>
+</html>

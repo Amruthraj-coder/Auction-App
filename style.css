@@ -1,0 +1,88 @@
+
+.container{
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+.heading{
+    width: 100%;
+    height:75px;
+    background-color: black;
+    color: white;
+    display: flex;
+    
+}
+
+.heading h3{
+    align-self: center;
+}
+
+.card{
+    border-radius: 5%;
+    padding:30px;
+    padding-bottom: 0;
+    /* border:2px solid red; */
+    box-shadow: 3px 3px 5px 2px rgba(128, 128, 128, 0.5)  ;
+    /* width: 30%; */
+    width: 25%;
+    height:250px;
+    cursor: pointer;
+}
+
+.card .uppercard{
+    border-bottom:2px solid blue;
+    gap: 5px;
+    height:35%;
+    display: flex;
+    flex-flow: column ;
+    align-content: space-between;
+}
+
+.up{
+    display: flex;
+    justify-content: space-between;
+    /* height:50%; */
+    
+}
+
+.up #time{
+    font-size: 13px;
+    font-weight:bold;
+}
+
+.uppercard #approve{
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+    /* background-color: green; */
+    width: 75px;
+    /* text-justify: center; */
+    text-align: center;
+    padding-top:3px ;
+
+
+    border-radius: 5px;
+
+
+    
+}
+#loc{
+    font-size: 12px;
+}
+
+.lowercard{
+    padding: 20px;
+    gap: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    /* border: 1px solid red */
+}
+#rupee{
+    font-weight: bold;
+    align-self: self-end;
+}
+#p{
+    font-size: 12px;
+}
